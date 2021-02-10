@@ -1,5 +1,15 @@
 <?php
 session_start();
+
+include('inc/conecta.php');
+
+// Restrição de acesso para apenas usuarios logados 
+
+if(!isset($_SESSION['login'])){
+
+	echo '<script>window.location.href="login.php"</script>';
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -9,9 +19,7 @@ session_start();
 </head>
 <body>
 
-<?php
-	echo $_SESSION['nome'];
-?>
+
 
 </body>
 </html>

@@ -6,12 +6,15 @@ include('inc/conecta.php');
 	if(isset($_POST['email'], $_POST['senha'])){
 		
 		$email = $_POST['email'];
+		// Criptografa a senha digitada pelo usuario
 		$senha = hash('sha256', $_POST['senha']);
 
+		// busca no banco um registro de usuario com email e senha iguais ao digitado
 		$busca = "SELECT * FROM usuario WHERE ds_email = '".$email."' and ds_senha = '".$senha."'";
 
 		if($result = $mysqli->query($busca)){
 			while($obj = $result->fetch_object()){
+				// se funcionar armazena dados na sessao e redireciona para a tela inicial
 				$_SESSION['login'] = $obj->cd_usuario;
 				$_SESSION['nome'] = $obj->nm_usuario;
 				header('location: index.php');
