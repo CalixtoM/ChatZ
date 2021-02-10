@@ -10,6 +10,9 @@ if(!isset($_SESSION['login'])){
 	echo '<script>window.location.href="login.php"</script>';
 
 }
+
+include('inc/navbar.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +22,31 @@ if(!isset($_SESSION['login'])){
 </head>
 <body>
 
+	
 
+	<div class="container">
+		<div class="row">
+			<div class="col"></div>
+		</div>
+	</div>
 
 </body>
 </html>
+
+<style type="text/css">
+	#btnsair{
+		color: darkred;
+	}
+
+	#btnsair:hover{
+		color: red;
+	}
+
+	#inptpesq{
+
+	}
+
+	#btnpesq{
+		margin-left: 5px;
+	}
+</style>
