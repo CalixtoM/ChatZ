@@ -37,14 +37,14 @@ include('inc/conecta.php');
 			<div class="col-sm-3"></div>
 			<div class="col-sm-6">
 				<label>Email:</label><br>
-				<input type="email" class="form-control" name="email">
+				<input type="email" class="form-control" name="email" id="inpttext">
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-3"></div>
 			<div class="col-sm-6">
 				<label>Senha:</label><br>
-				<input type="password" class="form-control" name="senha">
+				<input type="password" class="form-control" name="senha" id="inpttext">
 			</div>
 		</div>
 			<div class="row">
@@ -61,6 +61,10 @@ include('inc/conecta.php');
 </html>
 
 <style type="text/css">
+
+	#inpttext{
+		border-radius: 0%;
+	}
 
 	#logar{
 		margin-top: 15px;

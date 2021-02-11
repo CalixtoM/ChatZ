@@ -34,19 +34,5 @@ include('inc/navbar.php');
 </html>
 
 <style type="text/css">
-	#btnsair{
-		color: darkred;
-	}
 
-	#btnsair:hover{
-		color: red;
-	}
-
-	#inptpesq{
-
-	}
-
-	#btnpesq{
-		margin-left: 5px;
-	}
 </style>

@@ -5,21 +5,43 @@
 		    <span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<form class="d-flex" method="post">
+			<form class="d-flex" method="post" action="./busca.php">
 				<input type="search" name="pesq" placeholder="Pesquisar" class="form-control me-2" aria-label="Search" id="inptpesq">
 				<input value="Pesquisar" class="btn btn-outline-primary" type="submit" id="btnpesq">
 			</form>
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 				<li class="nav-item">
-					<a href="contatos.php" class="nav-link">Contatos</a>
+					<a href="../contatos.php" class="nav-link">Contatos</a>
 				</li>
 				<li class="nav-item">
-					<a href="configuracoes.php" class="nav-link">Configurações</a>
+					<a href="../configuracoes.php" class="nav-link">Configurações</a>
 				</li>
 				<li class="nav-item">
-					<a href="sair.php" class="nav-link" id="btnsair">Sair</a>
+					<a href="inc/sair.php" class="nav-link" id="btnsair">Sair</a>
 				</li>
 			</ul>				
 		</div>
 	</div>
 </nav>
+
+<style type="text/css">
+	
+	#btnsair{
+		color: darkred;
+	}
+
+	#btnsair:hover{
+		color: red;
+	}
+
+	#inptpesq{
+		border-radius: 0%;
+	}
+
+	#btnpesq{
+		margin-left: 5px;
+		border-radius: 0%;
+	}
+
+
+</style>
