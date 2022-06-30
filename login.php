@@ -47,11 +47,11 @@ if(isset($_POST['em'], $_POST['pw'])) {
       <form class="form-signin" method="post">
         <h1 class="h3 mb-3 font-weight-normal" style="color: white;">Faça login</h1>
         <label for="inputEmail" class="sr-only">Endereço de email</label>
-        <input type="email" id="inputEmail" name="em" style="border-radius: 0%; border-color: red; background-color: black;" class="form-control" placeholder="Seu email" required="" autofocus=""><br>
+        <input type="email" id="inputEmail" name="em" style="border-radius: 0%; border-color: #0275d8; background-color: black;" class="form-control" placeholder="Seu email" required="" autofocus=""><br>
         <label for="inputPassword" class="sr-only">Senha</label>
-        <input type="password" name="pw" id="inputPassword" style="border-radius: 0%; border-color: red; background-color: black;" class="form-control" placeholder="Senha" required="">
+        <input type="password" name="pw" id="inputPassword" style="border-radius: 0%; border-color: #0275d8; background-color: black;" class="form-control" placeholder="Senha" required="">
         <a href="registro.php" id="r"><p>Registre-se</p></a>
-        <input class="btn btn-lg btn-danger btn-block" type="submit" value="login">
+        <input class="btn btn-lg btn-primary btn-block" type="submit" value="login">
         <?php echo '<p class="mt-5 mb-3 text-muted" style="color: white;">© 2019-'.date('Y').'</p>'  ?>
         
       </form>
@@ -90,7 +90,7 @@ if(isset($_POST['em'], $_POST['pw'])) {
   }
 
   #r{
-    color: darkred;
+    color: #0275d8;
   }
 
 </style>
