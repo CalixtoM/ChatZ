@@ -1,28 +1,11 @@
 <?php
 include('inc/conecta.php');
+include('inc/functions.php');
 
 if(isset($_POST['nome'], $_POST['email'], $_POST['senha'])){
 	
-	$nome = $_POST['nome'];
-	$email = $_POST['email'];
+	cadastrarUsuario($mysqli);
 	
-	// Criptografa a senha digitada pelo usuario
-	$senha = hash('sha256', $_POST['senha']);
-
-	// Define o caminho do arquivo inserido de acordo com seu nome
-	$caminho = 'img/'. $_FILES['foto']['name'];
-	move_uploaded_file($_FILES['foto']['tmp_name'], $caminho);
-
-	$cadastrar = "INSERT INTO usuario VALUES(NULL, '".$nome."', '".$email."', '".$senha."', '".$caminho."', '0')";
-
-	if($mysqli->query($cadastrar)){
-		// Caso o insert funcione direciona para a tela de Login
-		echo '<script>window.location.href="login.php"</script>';
-	}
-	else{
-		// Caso não funcione exibe o erro no mysqli
-		echo $mysqli->error;
-	}
 }
 ?>
 
