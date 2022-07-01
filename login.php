@@ -1,23 +1,12 @@
 <?php
 session_start();
 include('inc/conecta.php');
+include('inc/functions.php');
 
 if(isset($_POST['em'], $_POST['pw'])) {
 
-  $senha = hash('sha256', $_POST['pw']);
+  realizaLogin($mysqli);
 
-	$sql = "SELECT * FROM Usuario WHERE ds_email = '".$_POST['em']."' AND ds_senha = '".$senha."'";
-
-	if($query = $mysqli->query($sql)){
-		$obj = $query->fetch_object();
-		if ($query->num_rows>0) {
-			$_SESSION['login'] = $obj->nm_usuario;
-			header('location: index.php');
-		}
-	}
-	else{
-		echo "falha";
-	}
 }
 
 ?>
