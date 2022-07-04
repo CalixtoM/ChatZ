@@ -5,7 +5,7 @@ include('inc/functions.php');
 
 if(isset($_POST['em'], $_POST['pw'])) {
 
-  realizaLogin($mysqli);
+  realizarLogin($mysqli);
 
 }
 

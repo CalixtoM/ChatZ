@@ -2,16 +2,23 @@
 
     include('inc/conecta.php');
 
+// Funções gerais
+
+    //Função responsavel por verificar a sessão.
+    //verificarLogin($mysqli){
+        
+    //}
+
 // Funções arquivo registro.php
 
     //Função responsavel por cadastrar o usuario.
-    cadastrarUsuario($mysqli){
+    function cadastrarUsuario($mysqli){
 
-        $nome = $_POST['nome'];
-	    $email = $_POST['email'];
+        $nome = $_POST['nomereg'];
+	    $email = $_POST['emailreg'];
 	
 	    // Criptografa a senha digitada pelo usuario
-	    $senha = hash('sha256', $_POST['senha']);
+	    $senha = hash('sha256', $_POST['senhareg']);
 
 	    // Define o caminho do arquivo inserido de acordo com seu nome
 	    $caminho = 'img/'. $_FILES['foto']['name'];
@@ -32,7 +39,7 @@
 // Funções arquivo Login.php
 
     // Função responsavel por verificar a existencia de usuarios com os determinados email e senha, validando caso real 
-    realizaLogin($mysqli){
+    function realizarLogin($mysqli){
         
         $senha = hash('sha256', $_POST['pw']);
 
@@ -42,7 +49,7 @@
 		    $obj = $query->fetch_object();
 		    
             if ($query->num_rows>0) {
-			    $_SESSION['login'] = $obj->nm_usuario;
+			    $_SESSION['login'] = $obj->cd_usuario;
 			    header('location: index.php');
 		    }
 	    }

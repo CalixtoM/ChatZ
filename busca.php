@@ -24,7 +24,7 @@ else{
 			while ($obj = $result->fetch_object()) {
 				$nome = $obj->nm_usuario;
 				$foto = $obj->ds_foto;
-
+				$codigo = $obj->cd_usuario;
 				echo '';
 			}
 		}
@@ -48,6 +48,7 @@ else{
 				while ($obj = $result->fetch_object()) {
 					$nome = $obj->nm_usuario;
 					$foto = $obj->ds_foto;
+					$codigo = $obj->cd_usuario;
 
 					echo '
 						<div class="col-sm-4">
@@ -55,6 +56,7 @@ else{
 								<div class="card-body">
 									<img class="card-img-top" id="ftp" src="'.$obj->ds_foto.'">
 									<h3 class="card-title">'.$obj->nm_usuario.'</h3>
+									<a href="chat.php?destino='.$codigo.'">Conversar</a>
 								</div>
 							</div>
 						</div>
