@@ -9,22 +9,28 @@ if($result = $mysqli->query($select)){
 
         $data = $obj->dt_envio;
         if($obj->id_remetente == $_SESSION['login']){
-            echo '<div class="row" style="background-color: lightblue; padding-left: 10%;">';
-            //echo '<h3>'.$obj->nm_usuario.'</h3>';
-                echo '<p>'.$obj->ds_mensagem.'<p/>';
-            echo '</div>';
-            echo '<div class="row">';
-                echo '<p>'.$data.'</p>';
-            echo '</div>';
+            echo '<div class="row" style="">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6" style="background-color: lightblue; ">';
+                        //echo '<h3>'.$obj->nm_usuario.'</h3>';
+                        echo '<p>'.$obj->ds_mensagem.'<p/>';
+                    echo '</div></div>';
+                    echo '<div class="row">
+                            <div class="col-sm-6"></div><div class="col-sm-6">';
+                        echo '<p >'.$data.'</p>';
+                echo '</div>
+            </div>';
 
         }else{
-            echo '<div class="row" style="background-color: silver; padding-left: 10%;">';
-            //echo '<h3>'.$obj->nm_usuario.'</h3>';
-                echo '<p>'.$obj->ds_mensagem.'<p/>';
-            echo '</div>';
-            echo '<div class="row">';
-                echo '<p>'.$data.'</p>';
-            echo '</div>';
+            echo '<div class="row" style=" ">
+                    <div class="col-sm-6" style="background-color: silver;">';
+                    //echo '<h3>'.$obj->nm_usuario.'</h3>';
+                        echo '<p>'.$obj->ds_mensagem.'<p/>';
+                    echo '</div></div>';
+                    echo '<div class="row">
+                        <div class="col-sm-6">';
+                            echo '<p>'.$data.'</p>';
+                        echo '</div></div>';
         }
         
     }

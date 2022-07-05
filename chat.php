@@ -36,7 +36,7 @@ include('inc/navbar.php');
         </script>
     </head>
     <body>
-        <div class="container">
+        <div class="container" id="chat1" style="padding-top: 15px;">
             <div class="row">
                 <div class="col-12">
                     <div id='chat'>

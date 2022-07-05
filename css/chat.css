@@ -1,7 +1,14 @@
-#chat{
-    max-height: 50%;
-    overflow-y: scroll;
+@media (max-height:  768px){
+    #chat{
+        max-height: 550px;
+        overflow-y: scroll;
+    }
+
+    #chat1{
+        max-height: 550px;
+    }
 }
+
 
 #msg{
     border-color: #0275d8;
