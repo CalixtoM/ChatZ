@@ -7,10 +7,26 @@ $select = "SELECT * FROM mensagens AS m INNER JOIN usuario AS  u ON m.id_remeten
 if($result = $mysqli->query($select)){
     while($obj = $result->fetch_object()){
 
-        echo '<h3>'.$obj->nm_usuario.'</h3>';
-        echo '<p>'.$obj->ds_mensagem.'</p>';
-        echo '<p>'.$obj->dt_envio.'</p>';
+        $data = $obj->dt_envio;
+        if($obj->id_remetente == $_SESSION['login']){
+            echo '<div class="row" style="background-color: lightblue; padding-left: 10%;">';
+            //echo '<h3>'.$obj->nm_usuario.'</h3>';
+                echo '<p>'.$obj->ds_mensagem.'<p/>';
+            echo '</div>';
+            echo '<div class="row">';
+                echo '<p>'.$data.'</p>';
+            echo '</div>';
 
+        }else{
+            echo '<div class="row" style="background-color: silver; padding-left: 10%;">';
+            //echo '<h3>'.$obj->nm_usuario.'</h3>';
+                echo '<p>'.$obj->ds_mensagem.'<p/>';
+            echo '</div>';
+            echo '<div class="row">';
+                echo '<p>'.$data.'</p>';
+            echo '</div>';
+        }
+        
     }
 }
 

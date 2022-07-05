@@ -1,0 +1,31 @@
+#chat{
+    max-height: 50%;
+    overflow-y: scroll;
+}
+
+#msg{
+    border-color: #0275d8;
+}
+
+#botao{
+    border-color: #0275d8;
+    background-color: white;
+    color: #0275d8;
+}
+
+#botao:hover{
+    color: white;
+    border-color: #0275d8;
+    background-color: #0275d8;
+}
+
+#input-mensagem{
+    bottom: 0;
+    position: absolute;
+    padding-top: -5px;
+    justify-content: center;
+}
+
+html, body{
+    overflow: hidden;
+}

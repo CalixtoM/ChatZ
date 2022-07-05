@@ -9,12 +9,15 @@ if(isset($_GET['destino'])){
 }
 
 $destino = $_SESSION['destino'];
+date_default_timezone_set('America/Sao_Paulo');
 $horario = date('Y/m/d H:i');
 
+include('inc/navbar.php');
 ?>
 
 <html>
     <head>
+        <link rel="stylesheet" type="text/css" href="css/chat.css">
         <title></title>
         <script type="text/javascript">
             function ajax(){
@@ -33,13 +36,30 @@ $horario = date('Y/m/d H:i');
         </script>
     </head>
     <body>
-        <div id='chat'>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div id='chat'>
 
+                    </div>
+                </div>
+            </div>
         </div>
-        <form method="post" action="chat.php">
-            <input type="text" name="mensagem" placeholder="mensagem">
-            <input type="submit" value="Enviar" > 
-        </form>
+        
+        <div class="container" id="input-mensagem">
+            <div class="row">
+                <div class="col-10">
+                    <form method="post" action="chat.php">
+                        <input type="text" name="mensagem" id="msg" class="form-control" placeholder="Digite Aqui...">
+                        
+                </div>
+                <div class="col-2">
+                        <input type="submit" class="btn btn-success" id="botao" value="Enviar" > 
+                    </form>
+                </div>
+            </div>
+        </div>
+        
         <?php 
 
             if(isset($_POST['mensagem'])){
@@ -50,7 +70,6 @@ $horario = date('Y/m/d H:i');
                 $query = "SELECT * FROM Mensagens";
 
 			    if ($query = $mysqli->query($insere_mensagem)){
-		 		    echo "funcionou";
 		 		    //header("location: login.php");
 		 		    //echo "<script>location.href='login.php';</script>";
 		 	    }
