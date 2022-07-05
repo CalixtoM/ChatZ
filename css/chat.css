@@ -1,7 +1,8 @@
-@media (max-height:  768px){
+@media (min-height:  620px){
     #chat{
         max-height: 550px;
         overflow-y: scroll;
+        
     }
 
     #chat1{
