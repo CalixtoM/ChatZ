@@ -8,6 +8,10 @@ if($result = $mysqli->query($select)){
     while($obj = $result->fetch_object()){
 
         $data = $obj->dt_envio;
+        $date = new DateTime($data);
+
+        
+
         if($obj->id_remetente == $_SESSION['login']){
             echo '<div class="row" style="">
                     <div class="col-sm-6"></div>
@@ -17,7 +21,7 @@ if($result = $mysqli->query($select)){
                     echo '</div></div>';
                     echo '<div class="row">
                             <div class="col-sm-6"></div><div class="col-sm-6">';
-                        echo '<p >'.$data.'</p>';
+                        echo '<p > Enviado em '.$date->format('d/m/Y').' às '.$date->format('H:i').'</p>';
                 echo '</div>
             </div>';
 
@@ -29,7 +33,7 @@ if($result = $mysqli->query($select)){
                     echo '</div></div>';
                     echo '<div class="row">
                         <div class="col-sm-6">';
-                            echo '<p>'.$data.'</p>';
+                            echo '<p > Enviado em '.$date->format('d/m/Y').' às '.$date->format('H:i').'</p>';
                         echo '</div></div>';
         }
         
