@@ -57,6 +57,7 @@ else{
 									<img class="card-img-top" id="ftp" src="'.$obj->ds_foto.'">
 									<h3 class="card-title">'.$obj->nm_usuario.'</h3>
 									<a href="chat.php?destino='.$codigo.'">Conversar</a>
+									<a href="add.php?contato2='.$codigo.'">Adicionar</a>
 								</div>
 							</div>
 						</div>
