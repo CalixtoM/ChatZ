@@ -21,7 +21,10 @@ if($result = $mysqli->query($select)){
                     echo '</div></div>';
                     echo '<div class="row">
                             <div class="col-sm-6"></div><div class="col-sm-6">';
-                        echo '<p > Enviado em '.$date->format('d/m/Y').' às '.$date->format('H:i').'</p>';
+                        echo '<p > Enviado em '.$date->format('d/m/Y').' às '.$date->format('H:i').'';
+                        if($obj->st_visualizada == 1){
+                            echo ' Visualizado</p>';
+                        }
                 echo '</div>
             </div>';
 
