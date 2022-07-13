@@ -18,11 +18,12 @@ A ideia desse projeto é treinar o uso de PHP, MySQL e Jquery, criando um sistem
 
 ### ☑️ To-Do:
 
-- Exibir última mensagem de cada contato na tela inicial;
-- Exibir status de visualização de mensagens na tela de chat;
+- <s>Exibir última mensagem de cada contato na tela inicial</s>;
+- <s>Exibir status de visualização de mensagens na tela de chat</s>;
 - Corrigir design base da tela de chat;
 - Desenvolver layout para tela de chat;
 - Desenvolver layout de tela inicial;
+- Alterar status da mensagem para visualizada;
 - Adicionar códigos de backend no arquivo de funções.
 
 # 🛠 PROJETO EM DESENVOLVIMENTO
