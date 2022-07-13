@@ -42,16 +42,27 @@ include('inc/navbar.php');
 						$foto = $obj->ds_foto;
 						$codigo = $obj->cd_usuario;
 
+
 						if($obj->cd_usuario != $_SESSION['login']){
+
+							$selMsg = "SELECT * FROM mensagens WHERE id_destinatario = '".$_SESSION['login']."' AND id_remetente = '".$codigo."' OR id_remetente = '".$_SESSION['login']."' AND id_destinatario = '".$codigo."' ORDER BY cd_mensagem DESC LIMIT 1";
+
+							if($resulta = $mysqli->query($selMsg)){
+								while ($obji = $resulta->fetch_object()) {
+									$ultMsg = $obji->ds_mensagem; 
+								}
+							}							
+
 							echo '<div class="col-sm-4">
-							<div class="card">
-								<div class="card-body">
-									<img class="card-img-top" id="ftp" src="'.$obj->ds_foto.'">
-									<h3 class="card-title">'.$obj->nm_usuario.'</h3>
-									<a href="chat.php?destino='.$codigo.'">Conversar</a>
+								<div class="card">
+									<div class="card-body">
+										<img class="card-img-top" style="max-width: 120px;" id="ftp" src="'.$obj->ds_foto.'">
+										<h3 class="card-title">'.$obj->nm_usuario.'</h3>
+										<p>'.$ultMsg.'</p>
+										<a href="chat.php?destino='.$codigo.'">Conversar</a>
+									</div>
 								</div>
-							</div>
-						</div>';
+							</div>';
 						}
 						else{
 							$selectContatos2 = "SELECT * FROM contatos AS c INNER JOIN usuario AS u ON c.id_contato2 = u.cd_usuario INNER JOIN usuario as us ON c.id_contato1 = us.cd_usuario WHERE id_contato1 = '".$_SESSION['login']."' OR id_contato2 = '".$_SESSION['login']."'";
@@ -62,10 +73,12 @@ include('inc/navbar.php');
 									$foto = $obj->ds_foto;
 									$codigo = $obj->cd_usuario;
 
+								
+
 									echo '<div class="col-sm-4">
 										<div class="card">
 											<div class="card-body">
-												<img class="card-img-top" id="ftp" src="'.$obj->ds_foto.'">
+												<img class="card-img-top" id="ftp" style="max-width: 120px;" src="'.$obj->ds_foto.'">
 												<h3 class="card-title">'.$obj->nm_usuario.'</h3>
 												<a href="chat.php?destino='.$codigo.'">Conversar</a>
 											</div>
