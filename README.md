@@ -16,5 +16,13 @@ A ideia desse projeto é treinar o uso de PHP, MySQL e Jquery, criando um sistem
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" height="40" width="52" alt="bootstrap logo"  />
 </div>
 
+### ☑️ To-Do:
+
+- Exibir última mensagem de cada contato na tela inicial;
+- Exibir status de visualização de mensagens na tela de chat;
+- Corrigir design base da tela de chat;
+- Desenvolver layout para tela de chat;
+- Desenvolver layout de tela inicial;
+- Adicionar códigos de backend no arquivo de funções.
 
 # 🛠 PROJETO EM DESENVOLVIMENTO
