@@ -23,6 +23,7 @@ A ideia desse projeto é treinar o uso de PHP, MySQL e Jquery, criando um sistem
 - Corrigir design base da tela de chat;
 - Desenvolver layout para tela de chat;
 - Desenvolver layout de tela inicial;
+- Desenvolver layout da tela de configurações;
 - Alterar status da mensagem para visualizada;
 - Adicionar códigos de backend no arquivo de funções.
 
