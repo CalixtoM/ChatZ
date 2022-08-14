@@ -28,4 +28,11 @@ A ideia desse projeto é treinar o uso de PHP, MySQL e Jquery, criando um sistem
 - Adicionar códigos de backend no arquivo de funções;
 - Desenvolver API.
 
+### 📸 Screenshots (algumas telas já desenvolvidas):
+
+#### Tela de Login
+
+![image](https://user-images.githubusercontent.com/51165259/184518786-10d77828-f23a-4d3d-b9e7-c76b198b5c5e.png)
+
+
 # 🛠 PROJETO EM DESENVOLVIMENTO
